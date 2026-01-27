@@ -1,0 +1,35 @@
+{
+    "id": 1,
+    "question": "Was hindert mich gerade daran, vorwärts zu kommen?",
+    "language": "de",
+    "status": {
+        "card_id": 66,
+        "title": "Ananda Loka",
+        "description": "Reine Freude. Fluss des Glücks ohne Grund.",
+        "image": "assets/images/AnandaLoka.webp",
+        "theme_location": [
+            "In welchem Moment oder Zustand fühle ich mich 'erfüllt' und dankbar?",
+            "Was von dem, was geschieht, fühlt sich wie ein reiner 'Segen' oder ein Geschenk an?"
+        ]
+    },
+    "obstacle": {
+        "card_id": 33,
+        "title": "Gandha Loka",
+        "description": "Intuitive Signale durch Assoziationen. Höre auf feine Erinnerungen.",
+        "image": "assets/images/GandhaLoka.webp",
+        "theme_blindspot": [
+            "Welche logische Erklärung nutze ich, um das intuitive Signal zu übertönen?",
+            "Auf welche vergessene Erfahrung oder Erinnerung versucht meine Intuition aufmerksam zu machen?"
+        ]
+    },
+    "resource": {
+        "card_id": 19,
+        "title": "Karma Loka",
+        "description": "Folgen vergangener Handlungen. Lektion über den Zusammenhang von Ursache und Wirkung.",
+        "image": "assets/images/KarmaLoka.webp",
+        "theme_solution": [
+            "Welche eine Handlung kann ich heute vollbringen, um eine positive Zukunft zu 'säen'?",
+            "Wie kann ich die volle Verantwortung für die aktuelle Situation übernehmen, um Kraft für Veränderungen zu gewinnen?"
+        ]
+    }
+}

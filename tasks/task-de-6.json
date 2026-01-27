@@ -1,0 +1,35 @@
+{
+    "id": 6,
+    "question": "Warum fühle ich mich in dieser Angelegenheit so blockiert?",
+    "language": "de",
+    "status": {
+        "card_id": 12,
+        "title": "Irasya",
+        "description": "Vergleiche mit anderen verbergen Wünsche. Verwandle Neid in Inspiration.",
+        "image": "assets/images/Irasya.webp",
+        "theme_location": [
+            "Wen beneide ich und worum genau (konkrete Fähigkeit, Ressource, Status)?",
+            "Welche Qualität dieser Person halte ich für mich selbst als unerreichbar?"
+        ]
+    },
+    "obstacle": {
+        "card_id": 4,
+        "title": "Lobha",
+        "description": "Fokus auf wahre Wünsche. Verstehe, was du wirklich willst.",
+        "image": "assets/images/Lobha.webp",
+        "theme_blindspot": [
+            "Welche innere Leere versuche ich mit äußeren Dingen oder Errungenschaften zu füllen?",
+            "Wessen Bestätigung suche ich, während ich versuche, das Gewünschte zu erhalten?"
+        ]
+    },
+    "resource": {
+        "card_id": 65,
+        "title": "Uranta Loka",
+        "description": "Eintauchen nach innen. Kontemplation und Enthüllung der inneren Welt.",
+        "image": "assets/images/UrantaLoka.webp",
+        "theme_solution": [
+            "Wie kann ich heute 15 Minuten innere Stille und Kontemplation schaffen?",
+            "Welchen 'inneren Dialog' oder welchen Gedanken ist es Zeit zu 'stoppen'?"
+        ]
+    }
+}

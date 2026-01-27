@@ -1,0 +1,35 @@
+{
+    "id": 5,
+    "question": "Welche innere Ressource übersehe ich momentan?",
+    "language": "de",
+    "status": {
+        "card_id": 71,
+        "title": "Raja Guna",
+        "description": "Energie, die Prozesse in Gang setzt. Bewegung nach vorne. Handele!",
+        "image": "assets/images/RajaGuna.webp",
+        "theme_location": [
+            "Welche meiner Handlungen ist gerade jetzt maximal energisch und aktiv?",
+            "Welches Ziel oder welche Aufgabe erfordert jetzt einen sofortigen 'Start'?"
+        ]
+    },
+    "obstacle": {
+        "card_id": 38,
+        "title": "Prana Loka",
+        "description": "Lebenskraft braucht Nahrung. Finde deine Energiequelle.",
+        "image": "assets/images/PranaLoka.webp",
+        "theme_blindspot": [
+            "Welches 'Loch' oder Energieleck bemerke ich nicht oder ignoriere es?",
+            "Was tue ich, was wie 'Selbstfürsorge' aussieht, aber eigentlich erschöpft?"
+        ]
+    },
+    "resource": {
+        "card_id": 1,
+        "title": "Janma",
+        "description": "Beginn einer neuen Phase, Offenheit. Die Möglichkeit, die Welt neu zu sehen.",
+        "image": "assets/images/Janma.webp",
+        "theme_solution": [
+            "Welche eine Handlung hilft mir, mich auf 'Null' zu setzen und mit einem weißen Blatt zu beginnen?",
+            "Wie kann ich mehr Vertrauen in mich selbst und den Prozess des Neuen zeigen?"
+        ]
+    }
+}

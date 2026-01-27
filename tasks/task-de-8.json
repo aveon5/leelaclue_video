@@ -1,0 +1,35 @@
+{
+    "id": 8,
+    "question": "Wie finde ich in diesem Chaos wieder zur Ruhe?",
+    "language": "de",
+    "status": {
+        "card_id": 9,
+        "title": "Kama Loka",
+        "description": "Bewusstsein für Emotionen. Erlaube dir, deine Gefühle ehrlich zu durchleben.",
+        "image": "assets/images/KamaLoka.webp",
+        "theme_location": [
+            "Welche Emotion steckt gerade im Körper fest oder behindert eine Entscheidungsfindung?",
+            "In welcher Situation ersetze ich wahre Gefühle durch rationale Erklärungen?"
+        ]
+    },
+    "obstacle": {
+        "card_id": 26,
+        "title": "Dukha",
+        "description": "Schmerz im Herzen ist Teil der Heilung. Durchlebe und lass die Gefühle los.",
+        "image": "assets/images/Dukha.webp",
+        "theme_blindspot": [
+            "Welches Bestreben oder Bedürfnis verbirgt sich hinter dieser Traurigkeit?",
+            "Welche Lektion oder welchen Wert verbirgt diese 'schmerzhafte' Erfahrung?"
+        ]
+    },
+    "resource": {
+        "card_id": 45,
+        "title": "Su-Vidya",
+        "description": "Entwicklung durch richtiges Verständnis und Aneignung von Wissen. Wende Erfahrung an.",
+        "image": "assets/images/SuVidya.webp",
+        "theme_solution": [
+            "Wie kann ich bereits vorhandenes Wissen in meine tägliche Praxis integrieren?",
+            "Welche neue, 'richtige' Informationsquelle sollte ich heute studieren?"
+        ]
+    }
+}

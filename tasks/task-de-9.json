@@ -1,0 +1,35 @@
+{
+    "id": 9,
+    "question": "Was versucht mir das Universum gerade zu sagen?",
+    "language": "de",
+    "status": {
+        "card_id": 69,
+        "title": "Brahma Loka",
+        "description": "Punkt der Schöpfung. Entstehung des Vorhabens. Setze jetzt die Absicht.",
+        "image": "assets/images/BrahmaLoka.webp",
+        "theme_location": [
+            "Welche 'Schöpfung' oder welches Vorhaben ist jetzt in meinem Geist am aktivsten?",
+            "In welchem Zustand fühle ich mich als 'Schöpfer' meiner Realität?"
+        ]
+    },
+    "obstacle": {
+        "card_id": 42,
+        "title": "Agni Loka",
+        "description": "Symbol der Transformation. Das Alte verbrennt und macht Platz für das Neue.",
+        "image": "assets/images/AgniLoka.webp",
+        "theme_blindspot": [
+            "Welches alte Bild von mir versuche ich zu bewahren, indem ich mich der Transformation widersetze?",
+            "Welchen Schmerz, verbunden mit dem 'Verlust' des Alten, weigere ich mich zu durchleben?"
+        ]
+    },
+    "resource": {
+        "card_id": 25,
+        "title": "Su Sang Loka",
+        "description": "Günstige Atmosphäre und unterstützende Menschen. Nimm ihre Hilfe an.",
+        "image": "assets/images/SuSangLoka.webp",
+        "theme_solution": [
+            "An wen kann ich mich heute für Inspiration oder Rat wenden?",
+            "Wie kann ich ein unterstützenderes und mich nährendes Umfeld schaffen?"
+        ]
+    }
+}

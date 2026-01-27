@@ -1,0 +1,35 @@
+{
+    "id": 7,
+    "question": "Was ist der nächste Schritt für mein inneres Wachstum?",
+    "language": "de",
+    "status": {
+        "card_id": 8,
+        "title": "Matsara",
+        "description": "Gefühl des Mangels. Bewegung, Verbesserung oder Akzeptanz der Situation sind nötig.",
+        "image": "assets/images/Matsara.webp",
+        "theme_location": [
+            "In welchem Bereich verbrauche ich die meiste Energie für den Vergleich mit anderen?",
+            "Welches Gefühl (Angst, Schuld) begleitet das Empfinden von 'Unzulänglichkeit'?"
+        ]
+    },
+    "obstacle": {
+        "card_id": 38,
+        "title": "Prana Loka",
+        "description": "Lebenskraft braucht Nahrung. Finde deine Energiequelle.",
+        "image": "assets/images/PranaLoka.webp",
+        "theme_blindspot": [
+            "Welches 'Loch' oder Energieleck bemerke ich nicht oder ignoriere es?",
+            "Was tue ich, was wie 'Selbstfürsorge' aussieht, aber eigentlich erschöpft?"
+        ]
+    },
+    "resource": {
+        "card_id": 2,
+        "title": "Maya",
+        "description": "Überprüfe alte Überzeugungen. Es gibt eine Chance, alles neu zu beginnen.",
+        "image": "assets/images/Maya.webp",
+        "theme_solution": [
+            "Was kann ich jetzt vereinfachen, um den Einfluss von Maya zu verringern?",
+            "Welche Überzeugung ist es an der Zeit, durch das Gegenteil zu ersetzen, um die Realität zu sehen?"
+        ]
+    }
+}

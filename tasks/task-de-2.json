@@ -1,0 +1,35 @@
+{
+    "id": 2,
+    "question": "Worauf sollte ich meine Energie heute konzentrieren?",
+    "language": "de",
+    "status": {
+        "card_id": 10,
+        "title": "Tapa",
+        "description": "Befreiung von Überflüssigem: Gewohnheiten, Gedanken, Informationen. Bewegung hin zur Klarheit.",
+        "image": "assets/images/Tapa.webp",
+        "theme_location": [
+            "Welches Umfeld oder welche Informationsquelle 'verstopft' meinen Geist?",
+            "Von welcher Gewohnheit oder Abhängigkeit bin ich gerade am meisten abhängig?"
+        ]
+    },
+    "obstacle": {
+        "card_id": 49,
+        "title": "Ganga",
+        "description": "Energie der Ruhe und Akzeptanz. Verlangsame, genieße den Moment.",
+        "image": "assets/images/Ganga.webp",
+        "theme_blindspot": [
+            "Welcher aufdringliche Gedanke oder welche Sorge hindert mich daran, mich vollständig zu verlangsamen?",
+            "Welche 'wichtige' Sache kann ich loslassen, um einfach zu 'sein'?"
+        ]
+    },
+    "resource": {
+        "card_id": 21,
+        "title": "Saman Pap",
+        "description": "Wiederherstellung des inneren Gleichgewichts. Harmonisiere das, was wichtig ist.",
+        "image": "assets/images/SamanPap.webp",
+        "theme_solution": [
+            "Welcher einfache 'ausgleichende' Schritt hilft, das Gleichgewicht wiederherzustellen (z.B. Ruhe nach der Arbeit)?",
+            "Wie kann ich beide 'gegensätzlichen' Kräfte als gleichwertig und notwendig anerkennen?"
+        ]
+    }
+}

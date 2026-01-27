@@ -1,0 +1,35 @@
+{
+    "id": 4,
+    "question": "Was darf ich jetzt loslassen?",
+    "language": "de",
+    "status": {
+        "card_id": 72,
+        "title": "Tama Guna",
+        "description": "Trägheit hilft, das Gesehene zu materialisieren. Mache einen konkreten Schritt.",
+        "image": "assets/images/TamaGuna.webp",
+        "theme_location": [
+            "Welche meiner Handlungen ist jetzt maximal 'materiell' und 'spürbar'?",
+            "In welchem Bereich fühle ich, dass ich 'Trägheit' für den Abschluss brauche?"
+        ]
+    },
+    "obstacle": {
+        "card_id": 63,
+        "title": "Tamas",
+        "description": "Zustand von Stillstand und Trägheit. Bring mehr Licht und Bewegung hinein.",
+        "image": "assets/images/Tamas.webp",
+        "theme_blindspot": [
+            "Welche Angst (vor Misserfolg oder Erfolg) ist als Faulheit und Trägheit getarnt?",
+            "Welche einfache physische oder mentale Aktivität vermeide ich?"
+        ]
+    },
+    "resource": {
+        "card_id": 2,
+        "title": "Maya",
+        "description": "Überprüfe alte Überzeugungen. Es gibt eine Chance, alles neu zu beginnen.",
+        "image": "assets/images/Maya.webp",
+        "theme_solution": [
+            "Was kann ich jetzt vereinfachen, um den Einfluss von Maya zu verringern?",
+            "Welche Überzeugung ist es an der Zeit, durch das Gegenteil zu ersetzen, um die Realität zu sehen?"
+        ]
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "id": 3,
+    "question": "Welche Lektion spiegelt mir meine aktuelle Situation?",
+    "language": "de",
+    "status": {
+        "card_id": 21,
+        "title": "Saman Pap",
+        "description": "Wiederherstellung des inneren Gleichgewichts. Harmonisiere das, was wichtig ist.",
+        "image": "assets/images/SamanPap.webp",
+        "theme_location": [
+            "Welche zwei entgegengesetzten Kräfte (Arbeit/Ruhe, Emotionen/Verstand) sind jetzt im Ungleichgewicht?",
+            "Wo im Leben fühle ich mich 'überzogen' oder 'unterzogen'?"
+        ]
+    },
+    "obstacle": {
+        "card_id": 62,
+        "title": "Sukha",
+        "description": "Leichtigkeit und inneres Wohlbefinden. Bewahre ruhige Freude.",
+        "image": "assets/images/Sukha.webp",
+        "theme_blindspot": [
+            "Welchen 'negativen' oder 'komplizierten' Gedanken nutze ich, um nicht 'zu glücklich' zu sein?",
+            "Welche einfache, tägliche Praxis des Wohlbefindens ignoriere ich?"
+        ]
+    },
+    "resource": {
+        "card_id": 57,
+        "title": "Vayu Loka",
+        "description": "Wichtigkeit, Raum und Freiheit zu fühlen. Füge Leichtigkeit ins Leben hinzu.",
+        "image": "assets/images/VayuLoka.webp",
+        "theme_solution": [
+            "Wie kann ich mehr 'Luft' oder Freiheit in meiner dichtesten Aufgabe schaffen?",
+            "Welche meiner Handlungen wird den 'Ausbruch aus dem Käfig' symbolisieren?"
+        ]
+    }
+}

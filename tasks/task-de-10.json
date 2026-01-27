@@ -1,0 +1,35 @@
+{
+    "id": 10,
+    "question": "Welche Angst steht mir im Weg?",
+    "language": "de",
+    "status": {
+        "card_id": 17,
+        "title": "Daya",
+        "description": "Weichheit des Herzens. Zeige Fürsorge und Wärme dir selbst und anderen gegenüber.",
+        "image": "assets/images/Daya.webp",
+        "theme_location": [
+            "Wer in meinem Umfeld braucht jetzt bedingungslose Akzeptanz?",
+            "Welcher Teil von mir selbst (Körper, Emotionen, Erfahrung) bittet um Mitgefühl?"
+        ]
+    },
+    "obstacle": {
+        "card_id": 27,
+        "title": "Param Artha",
+        "description": "Geben ohne Ego. Der Welt und anderen dienen schafft Wohl.",
+        "image": "assets/images/ParamArtha.webp",
+        "theme_blindspot": [
+            "Welche egoistische Erwartung (Lob, Anerkennung) verberge ich hinter dem Dienen?",
+            "Welche einfache, bescheidene Hilfe ignoriere ich, während ich auf die Gelegenheit zum 'großen' Dienen warte?"
+        ]
+    },
+    "resource": {
+        "card_id": 57,
+        "title": "Vayu Loka",
+        "description": "Wichtigkeit, Raum und Freiheit zu fühlen. Füge Leichtigkeit ins Leben hinzu.",
+        "image": "assets/images/VayuLoka.webp",
+        "theme_solution": [
+            "Wie kann ich mehr 'Luft' oder Freiheit in meiner dichtesten Aufgabe schaffen?",
+            "Welche meiner Handlungen wird den 'Ausbruch aus dem Käfig' symbolisieren?"
+        ]
+    }
+}
