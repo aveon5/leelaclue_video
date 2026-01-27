@@ -114,13 +114,19 @@ const Outro: React.FC = () => {
     const frame = useCurrentFrame();
     const opacity = interpolate(frame, [0, 20], [0, 1]);
 
+    // Breathing Animation (Alive)
+    const breath = Math.sin(frame / 10) * 0.03 + 1; // 1.0 to 1.06
+
+    // Light Blick (Shine) effect - subtle sweep
+    const shinePos = interpolate(frame % 90, [0, 45], [-100, 200]); // Fast sweep every 3 sec
+
     return (
         <AbsoluteFill
             style={{
                 justifyContent: 'center',
                 alignItems: 'center',
                 backgroundColor: 'black',
-                opacity
+                opacity,
             }}
         >
             <Img
@@ -133,23 +139,47 @@ const Outro: React.FC = () => {
                     opacity: 0.4,
                 }}
             />
-            <Img
-                src={staticFile("assets/app_icon.png")}
-                style={{
-                    width: 300,
-                    height: 300,
-                    marginBottom: 40,
-                    borderRadius: 40,
-                    boxShadow: '0 10px 20px rgba(0,0,0,0.5)'
-                }}
-            />
+
+            <div style={{
+                position: 'relative',
+                marginBottom: 50,
+                marginTop: -50, // Move higher
+                transform: `scale(${breath})`,
+                borderRadius: '50%',
+                boxShadow: '0 0 50px rgba(212, 175, 55, 0.4), 0 20px 40px rgba(0,0,0,0.6)', // Gold glow + shadow
+                overflow: 'hidden' // For shine
+            }}>
+                <Img
+                    src={staticFile("assets/app_icon.png")}
+                    style={{
+                        width: 450, // Bigger
+                        height: 450,
+                        borderRadius: '50%', // Round
+                        display: 'block'
+                    }}
+                />
+                {/* Light Blick / Shine Overlay */}
+                <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    bottom: 0,
+                    width: 100,
+                    left: 0,
+                    background: 'linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent)',
+                    transform: `skewX(-20deg) translateX(${shinePos}%)`,
+                    pointerEvents: 'none'
+                }} />
+            </div>
+
             <h1
                 style={{
-                    fontSize: 50,
+                    fontSize: 100, // Bigger
                     fontFamily: 'Philosopher',
                     color: '#D4AF37',
                     textAlign: 'center',
-                    textShadow: '0 0 10px rgba(212, 175, 55, 0.5)'
+                    textShadow: '0 0 20px rgba(212, 175, 55, 0.6)',
+                    margin: 0,
+                    marginBottom: 20
                 }}
             >
                 LeelaClue
@@ -159,12 +189,34 @@ const Outro: React.FC = () => {
                     fontSize: 40,
                     fontFamily: 'Philosopher',
                     color: '#eee',
-                    marginTop: 20,
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    maxWidth: '80%',
+                    lineHeight: 1.3,
+                    marginBottom: 60
                 }}
             >
-                Get your download today!
+                Die Antwort entsteht im Innehalten – <br /> LeelaClue begleitet dich dabei!
             </h2>
+
+            <div style={{
+                position: 'absolute',
+                bottom: 80, // Not at very bottom
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                opacity: 0.8
+            }}>
+                <p style={{
+                    fontSize: 28,
+                    fontFamily: 'sans-serif',
+                    color: '#aaa',
+                    margin: 0,
+                    marginBottom: 10
+                }}>
+                    Available on Apple Store and Google Play
+                </p>
+                {/* Could add store icons here later if needed */}
+            </div>
         </AbsoluteFill>
     );
 };
