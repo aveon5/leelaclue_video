@@ -1,31 +1,25 @@
-import { AbsoluteFill, Img, Sequence, useCurrentFrame, interpolate, useVideoConfig, staticFile, Audio } from 'remotion';
+import React from 'react';
+import { AbsoluteFill, Img, Sequence, useCurrentFrame, interpolate, useVideoConfig, staticFile, Audio, prefetch } from 'remotion';
 import { z } from 'zod';
-import { Card, cardSchema } from './components/Card';
+import { VideoCard, videoCardSchema } from './components/VideoCard';
 import musicSource from "../public/assets/music.mp3";
 
-export const taskSchema = z.object({
+export const leelaInMotionSchema = z.object({
     id: z.number(),
     question: z.string(),
     language: z.string(),
-    status: cardSchema,
-    obstacle: cardSchema,
-    resource: cardSchema,
+    status: videoCardSchema,
+    obstacle: videoCardSchema,
+    resource: videoCardSchema,
 });
 
-export const VideoFabric: React.FC<z.infer<typeof taskSchema>> = ({
+export const LeelaInMotion: React.FC<z.infer<typeof leelaInMotionSchema>> = ({
     question,
     status,
     obstacle,
     resource,
 }) => {
     const frame = useCurrentFrame();
-    const { fps } = useVideoConfig(); // keep usage if needed or remove if unused, but user has lints about unused vars. 
-    // linter said fps is unused. Let's use it or remove it. using it in log to silence lint? no.
-    // simpler: just keep it for now, or ignore.
-
-    // Fix lints:
-    // spring is unused -> remove from import
-    // bgOpacity is unused -> remove line
 
     return (
         <AbsoluteFill style={{ backgroundColor: 'black' }}>
@@ -37,32 +31,32 @@ export const VideoFabric: React.FC<z.infer<typeof taskSchema>> = ({
                     width: '100%',
                     height: '100%',
                     objectFit: 'cover',
-                    opacity: 0.8, // Visible but slightly darkened by black bg
+                    opacity: 0.8,
                 }}
             />
 
-            {/* Intro: Question */}
-            <Sequence from={0} durationInFrames={150}>
+            {/* Intro: Question - 5 seconds at 24fps */}
+            <Sequence from={0} durationInFrames={120}>
                 <Intro question={question} />
             </Sequence>
 
-            {/* Card 1: Status */}
-            <Sequence from={150} durationInFrames={150}>
-                <Card {...status} type="status" />
+            {/* Card 1: Status - 8 seconds at 24fps to match video length */}
+            <Sequence from={120} durationInFrames={192}>
+                <VideoCard key={`status-${status.card_id}`} {...status} type="status" />
             </Sequence>
 
-            {/* Card 2: Obstacle */}
-            <Sequence from={300} durationInFrames={150}>
-                <Card {...obstacle} type="obstacle" />
+            {/* Card 2: Obstacle - 8 seconds at 24fps to match video length */}
+            <Sequence from={312} durationInFrames={192}>
+                <VideoCard key={`obstacle-${obstacle.card_id}`} {...obstacle} type="obstacle" />
             </Sequence>
 
-            {/* Card 3: Resource */}
-            <Sequence from={450} durationInFrames={150}>
-                <Card {...resource} type="resource" />
+            {/* Card 3: Resource - 8 seconds at 24fps to match video length */}
+            <Sequence from={504} durationInFrames={192}>
+                <VideoCard key={`resource-${resource.card_id}`} {...resource} type="resource" />
             </Sequence>
 
-            {/* Outro */}
-            <Sequence from={600} durationInFrames={90}>
+            {/* Outro - 3 seconds at 24fps */}
+            <Sequence from={696} durationInFrames={72}>
                 <Outro />
             </Sequence>
 
@@ -70,7 +64,7 @@ export const VideoFabric: React.FC<z.infer<typeof taskSchema>> = ({
             <Audio
                 src={musicSource}
                 volume={(f) =>
-                    interpolate(f, [0, 60, 660, 690], [0, 0.5, 0.5, 0], {
+                    interpolate(f, [0, 48, 744, 768], [0, 0.5, 0.5, 0], {
                         extrapolateLeft: "clamp",
                         extrapolateRight: "clamp",
                     })
@@ -78,6 +72,22 @@ export const VideoFabric: React.FC<z.infer<typeof taskSchema>> = ({
             />
         </AbsoluteFill>
     );
+};
+
+// Prefetch helper component to load videos early
+const PrefetchVideos: React.FC<{
+    status: any;
+    obstacle: any;
+    resource: any;
+}> = ({ status, obstacle, resource }) => {
+    React.useEffect(() => {
+        // Prefetch all videos at component mount to avoid buffering during playback
+        prefetch(staticFile(status.video));
+        prefetch(staticFile(obstacle.video));
+        prefetch(staticFile(resource.video));
+    }, [status.video, obstacle.video, resource.video]);
+
+    return null;
 };
 
 const Intro: React.FC<{ question: string }> = ({ question }) => {
@@ -128,7 +138,7 @@ const Intro: React.FC<{ question: string }> = ({ question }) => {
                     // Blend edges to remove "own background" look
                     maskImage: 'radial-gradient(circle at center, black 30%, transparent 85%)',
                     WebkitMaskImage: 'radial-gradient(circle at center, black 30%, transparent 85%)',
-                    mixBlendMode: 'screen' // Try screen to blend dark parts into black bg
+                    mixBlendMode: 'screen'
                 }}
             />
 
@@ -137,18 +147,18 @@ const Intro: React.FC<{ question: string }> = ({ question }) => {
                     zIndex: 2,
                     opacity: textOpacity,
                     transform: `translateY(${textTranslateY}px)`,
-                    backgroundColor: 'rgba(0,0,0,0.6)', // Dark container
+                    backgroundColor: 'rgba(0,0,0,0.6)',
                     padding: 40,
                     borderRadius: 20,
                     boxShadow: '0 10px 30px rgba(0,0,0,0.8)',
-                    border: '1px solid #D4AF37', // Thinner Gold border
+                    border: '1px solid #D4AF37',
                     maxWidth: '80%'
                 }}
             >
                 <h1
                     style={{
                         fontSize: 60,
-                        fontFamily: 'Philosopher', // Use mystic font
+                        fontFamily: 'Philosopher',
                         textAlign: 'center',
                         color: '#D4AF37', // Gold text
                         textShadow: '0 0 10px rgba(212, 175, 55, 0.5)',
@@ -167,10 +177,10 @@ const Outro: React.FC = () => {
     const opacity = interpolate(frame, [0, 20], [0, 1]);
 
     // Breathing Animation (Alive)
-    const breath = Math.sin(frame / 10) * 0.03 + 1; // 1.0 to 1.06
+    const breath = Math.sin(frame / 10) * 0.03 + 1;
 
     // Light Blick (Shine) effect - subtle sweep
-    const shinePos = interpolate(frame % 90, [0, 45], [-100, 200]); // Fast sweep every 3 sec
+    const shinePos = interpolate(frame % 90, [0, 45], [-100, 200]);
 
     return (
         <AbsoluteFill
@@ -195,18 +205,18 @@ const Outro: React.FC = () => {
             <div style={{
                 position: 'relative',
                 marginBottom: 50,
-                marginTop: -50, // Move higher
+                marginTop: -50,
                 transform: `scale(${breath})`,
                 borderRadius: '50%',
-                boxShadow: '0 0 50px rgba(212, 175, 55, 0.4), 0 20px 40px rgba(0,0,0,0.6)', // Gold glow + shadow
-                overflow: 'hidden' // For shine
+                boxShadow: '0 0 50px rgba(212, 175, 55, 0.4), 0 20px 40px rgba(0,0,0,0.6)',
+                overflow: 'hidden'
             }}>
                 <Img
                     src={staticFile("assets/app_icon.png")}
                     style={{
-                        width: 450, // Bigger
+                        width: 450,
                         height: 450,
-                        borderRadius: '50%', // Round
+                        borderRadius: '50%',
                         display: 'block'
                     }}
                 />
@@ -225,7 +235,7 @@ const Outro: React.FC = () => {
 
             <h1
                 style={{
-                    fontSize: 100, // Bigger
+                    fontSize: 100,
                     fontFamily: 'Philosopher',
                     color: '#D4AF37',
                     textAlign: 'center',
@@ -252,7 +262,7 @@ const Outro: React.FC = () => {
 
             <div style={{
                 position: 'absolute',
-                bottom: 80, // Not at very bottom
+                bottom: 80,
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
@@ -267,7 +277,6 @@ const Outro: React.FC = () => {
                 }}>
                     Available on Apple Store and Google Play
                 </p>
-                {/* Could add store icons here later if needed */}
             </div>
         </AbsoluteFill>
     );
